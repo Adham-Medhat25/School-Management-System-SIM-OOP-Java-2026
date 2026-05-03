@@ -26,6 +26,7 @@ public class FinalOOPproject {
         }
         else{
             System.out.println("This is Invalid Username or Password");
+            System.out.println("Get this BLOCK!!");
             System.exit(0);
         }
         
@@ -94,22 +95,33 @@ public class FinalOOPproject {
        }
        System.out.println("");
    }
+   
+   
+   public static void DrawLine(int x,char c){
+       for(int i=0;i<x;i++){
+            System.out.print(c);
+       }
+       System.out.println("");
+   }
            
     //-->Students Page Method<--//
    
    public static void StudentsData(){
    Student Std = new Student();
-         //Intialization of Students ArrayList :)
+   
+         //Intialization of Students ArrayList  :)
+         
          ArrayList<Student> StudentsInfo = new ArrayList<>();
    
    
-   // Syntax for Students Constructor Name ,Age,Phone,Address,GPA,Level,Warnings
-       StudentsInfo.add(new Student("Ahmed Elshaer","20","01100799540","Shatby",3.4,1,12));
-       StudentsInfo.add(new Student("Omar Sherbini","32","01100799540","Maady",10.5,4,17));
-       StudentsInfo.add(new Student("Ahmed Salah","31","01100799540","Smouha",4.0,4,1));
-       StudentsInfo.add(new Student("Said Sadd","61","01100799540","Kafr Abdo",3.8,1,4));
-       StudentsInfo.add(new Student("Mohamed Salah","33","01100799540","El-Mohandseen",4.0,4,0));
-       StudentsInfo.add(new Student("Ibrahim Farouk","56","01100799540","Camp Chezar",3.6,4,3));
+   // Syntax for Students Constructor Name ,Age,Phone,Address,GPA,Level,Academic Warnings
+       StudentsInfo.add(new Student("Ahmed Elshaer","19","01205099785","El-Seyouf",4.0,1,0));
+       StudentsInfo.add(new Student("Ahmed Sadek","19","015418876021","El-Falaky",4.0,1,0));
+       StudentsInfo.add(new Student("Ahmed Osama","18","011880145984","Sidi-Bishr",4.0,1,0));
+       StudentsInfo.add(new Student("Ahmed Abdelkader","18","012147851001","45 Bridge",1.0,1,0));
+       StudentsInfo.add(new Student("Ahmed Tarek","18","012008999547","Sidi-Bishr",4.0,1,0));
+       StudentsInfo.add(new Student("Adham Medhat","19","01100799540","EL-Falaky",4.0,1,0));
+       StudentsInfo.add(new Student("Mohamed Ramadan","19","01560735010","Kafr-Abdo",1.7,1,2));
        
        DrawLine(138);
        // Here we used the Abstract method ShowRole();
@@ -185,11 +197,11 @@ public class FinalOOPproject {
 
          
          
-         DrawLine(138);
+         DrawLine(138,'*');
         System.out.println("-------------["+StfObj.ShowRole()+"]-------------");
         for(int i=0;i<StaffInfo.size();i++){
         StaffInfo.get(i).display(i+1);
         }
-        DrawLine(138);
+        DrawLine(138,'*');
     }
 }
